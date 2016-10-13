@@ -1,0 +1,84 @@
+---
+layout: default
+ref: Home
+lang: cs
+homepage: true
+---
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center orange-text">XRG</h1>
+      <div class="row center">
+      <h4 class="header col s12 light">Výzkumná skupina na <a  class="light-green-text" href="http://www.ksi.mff.cuni.cz" title="Katedra softwarového inženýrství, Matematicko-fyzikální fakulta Univerzity Karlovy">KSI MFF UK</a> zabývající se velkými a propojenými daty</h4>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+<h3 class="center orange-text">Co se u nás děje</h3>
+  <div class="row">
+    <div class="col s12 m6 l4">
+      <div class="icon-block">
+        <h2 class="center"><a class="orange-text" href="/publikace/"><i class="material-icons">library_books</i></a></h2>
+        <h5 class="center">Publikace</h5>
+        <p class="light flow-text">
+        Výsledky našeho výzkumu publikujeme na <a class="light-green-text" href="/publikace/">konferencích a v žurnálech</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l4">
+      <div class="icon-block">
+        <h2 class="center"><a class="orange-text" href="/témata/"><i class="material-icons">school</i></a></h2>
+        <h5 class="center">Témata pro studenty</h5>
+        <p class="light flow-text">
+        Zajímá vás ročníkový projekt, bakalářská práce, softwarový projekt, diplomová práce nebo doktorské studium?
+        Podívejte se na naše <a class="light-green-text" href="/témata/">témata pro studenty</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col s12 m6 l4">
+      <div class="icon-block">
+        <h2 class="center orange-text"><i class="material-icons">monetization_on</i></h2>
+        <h5 class="center">Partneři</h5>
+        <p class="light flow-text">
+        Spolupracujeme s komerčními partnery v rámci smluvního výzkumu.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+     <div class="row">
+          <div class="col s12">
+              <h3 class="center orange-text">Novinky</h3>
+               <ul class="collapsible" data-collapsible="accordion">
+                {% for post in site.posts limit:1 %}
+                <li>
+                  <div class="collapsible-header active"><i class="material-icons orange-text">{{ post.icon }}</i>{{ post.date | date: "%Y-%m-%d" }}: <span class=" light-green-text">{{ post.title }}</span></div>
+                  <div class="collapsible-body">
+                    <div class="flow-text">{{ post.excerpt }}</div>
+                    {% if post.detail %}
+                    <a href="{{ post.url }}" class="btn waves-effect waves-light orange"><i class="material-icons left">open_in_browser</i>Více</a>
+                    {% endif %}
+                  </div>
+                </li>
+                {% endfor %}
+                {% for post in site.posts limit:4 offset:1 %}
+                <li>
+                  <div class="collapsible-header"><i class="material-icons orange-text">{{ post.icon }}</i>{{ post.date | date: "%Y-%m-%d" }}: <span class="light-green-text">{{ post.title }}</span></div>
+                  <div class="collapsible-body">
+                    <div class="flow-text">{{ post.excerpt }}</div>
+                    {% if post.detail %}
+                    <a href="{{ post.url }}" class="btn waves-effect waves-light orange"><i class="material-icons left">open_in_browser</i>Více</a>
+                    {% endif %}
+                  </div>
+                </li>
+                {% endfor %}
+               </ul>
+               <p class="center"><a href="/aktuality/" class="btn waves-effect waves-light orange"><i class="material-icons left">lightbulb_outline</i>Další novinky</a> </p>
+          </div>
+    </div>
+  </div>
