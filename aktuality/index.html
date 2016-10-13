@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Příspěvky
+title: Aktuality
 ref: Posts
 lang: cs
 postindex: true
@@ -10,7 +10,7 @@ postindex: true
 	<div class="row ">
 		<div class="col s12">
 			<div class="section">
-			  <h2 class="header center orange-text">Příspěvky</h2>
+			  <h2 class="header center orange-text">Aktuality</h2>
 			</div>
 		</div>
 	</div>
@@ -21,8 +21,8 @@ postindex: true
         <div class="col s12 m6 l4">
 			<div class="section">
 			  <div class="icon-block">
-                <h2 class="center blue-text"><i class="material-icons">{{ post.icon }}</i></h2>
-                <h5 class="center orange-text">{{ post.title }}</h5>
+                <h2 class="center orange-text"><i class="material-icons">{{ post.icon }}</i></h2>
+                <h5 class="center light-green-text">{{ post.title }}</h5>
                 <h6 class="center">{{ post.date | date: "%Y-%m-%d" }}</h6>
                 <div class="flow-text">
 					{{ post.excerpt }}
